@@ -1,0 +1,11 @@
+name: 'packaging'
+description: 'Generate and package docs'
+inputs:
+  pandoc_args:
+    description: 'Arguments for pandoc command'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.pandoc_args }}
