@@ -5,6 +5,7 @@ OUT="$2"
 TITLE="$3"
 
 cd /github/workspace
+git fetch --tags
 ver=`git describe --tags`
 echo VER=$ver
 
