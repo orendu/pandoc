@@ -14,4 +14,4 @@ unixtime=`git show -s --format=%ct`
 date=`date --date=@$unixtime +%F`
 echo DATE=$date
 
-sed "0,/\[VER\]/ s//$ver/g" "$IN" | sed "0,/\[DATE\]/ s//$date/g" | pandoc --from gfm --to html5 -N --css /github/workspace/"$CSS" --standalone -M title="$TITLE" -o "$OUT".pdf
+sed "0,/\[VER\]/ s//$ver/g" "$IN" | sed "0,/\[DATE\]/ s//$date/g" | pandoc --from gfm --to html5 -N --css /github/workspace/"$CSS" --standalone -M title="$TITLE" -o "$OUT"
