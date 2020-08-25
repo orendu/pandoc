@@ -1,11 +1,12 @@
 #!/bin/sh
 
-IN="$1"
-OUT="$2"
-CSS="$3"
-TITLE="$4"
+WD="$1"
+IN="$2"
+OUT="$3"
+CSS="$4"
+TITLE="$5"
 
-cd /github/workspace
+cd /github/workspace/"$WD"
 git fetch --tags
 ver=`git describe --tags`
 echo VER=$ver
