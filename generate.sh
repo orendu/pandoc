@@ -8,7 +8,8 @@ TITLE="$5"
 
 cd /github/workspace/"$WD"
 git fetch --tags
-ver=`git describe --tags`
+H=`git log -1 --pretty=format:%H .`
+ver=`git describe --tags $H`
 echo VER=$ver
 
 unixtime=`git show -s --format=%ct`
